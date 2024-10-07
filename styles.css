@@ -31,3 +31,7 @@ main {
 footer {
   grid-area: footer;
 }
+
+.hide_element {
+  visibility: hidden;
+}
