@@ -5,16 +5,20 @@
 }
 
 body {
-   background-color: #a0b489;
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 300px auto 300px;
-   grid-template-areas: 
+  border: 1px solid red;
+  background-color: #a0b489;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
     "header"
     "main"
     "footer";
   place-items: center;
-  height: 100vh;
+  gap: 2rem;
+  font-size: 16px;
+  margin: 1rem 0;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 header {
@@ -25,7 +29,6 @@ main {
   grid-area: main;
   display: grid;
   gap: 1rem;
-  height: 100%;
 }
 
 footer {
@@ -34,4 +37,11 @@ footer {
 
 .hide_element {
   visibility: hidden;
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 768px) {
+  main {
+    height: 100vh;
+  }
 }
